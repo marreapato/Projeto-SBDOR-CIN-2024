@@ -55,17 +55,32 @@ CREATE TYPE PASSAGEM_TP AS OBJECT(
     valor_passagem NUMBER(38,2),
     data_ida DATE,
     data_chegada DATE,
-    passageiros REF TP_PASSAGEIRO
+    passageiros REF tp_passageiro
+);
+
+CREATE TABLE PASSAGEIRO_TB OF TP_PASSAGEIRO(
+CONSTRAINT CPF_UNICO_PASSAGEIRO PRIMARY KEY (PK_CPF)
+);
+
+
+CREATE TABLE MENOR_IDADE_TB OF MENOR_IDADE_TP;
+
+CREATE TABLE MAIOR_IDADE_TB OF MAIOR_IDADE_TP;
+
+CREATE TABLE PASSAGEM OF PASSAGEM_TP(    
+    CONSTRAINT numero_passagem_pkey PRIMARY KEY(pk_localizador_passagem),
+    CONSTRAINT check_valor CHECK(VALOR_PASSAGEM>0),
+    PASSAGEIROS WITH ROWID REFERENCES PASSAGEIRO_TB
 );
 
 ----
 
-CREATE OR REPLACE TYPE tp_ref_compra AS OBJECT(
-data_compra DATE,
+CREATE OR REPLACE TYPE tp_ref_relac AS OBJECT(
+passageiros REF TP_PASSAGEIRO,
 passagem REF PASSAGEM_TP) NOT FINAL;
 /
     
-CREATE TYPE tp_nt_ref_reserva AS TABLE OF tp_ref_reserva;
+CREATE TYPE tp_nt_ref_relac AS TABLE OF tp_ref_relac;
 /
     
 
@@ -76,12 +91,11 @@ CREATE OR REPLACE TYPE VOO_TP AS OBJECT(
     destino VARCHAR2(3),      -- destino IATA 3
     hora_embarque TIMESTAMP,
     hora_desembarque TIMESTAMP,
-    reservas tp_nt_ref_reserva
+    compras tp_nt_ref_relac
 );
 
 
 ----------------
-
 CREATE TYPE ESTADIA_TP AS OBJECT(
 
  pk_cod_estadia INTEGER,
