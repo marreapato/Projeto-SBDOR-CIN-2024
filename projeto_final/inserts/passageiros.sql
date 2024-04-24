@@ -104,7 +104,7 @@ INSERT INTO PASSAGEIRO_TB VALUES (
     'Pedro Oliveira',
     'M',
     TO_DATE('18/08/2010', 'DD/MM/YYYY'),
-    tp_endereco('Brasil', '54321098', 'MG', 'Belo Horizonte', 'Av. K, 789'),
+    tp_endereco('Brasil', '65432109', 'RS', 'Porto Alegre', 'Av. O, 567'),
     tp_fones(TP_FONE('55', '31', '987654321')),
     'pedro.oliveira@email.com'
 );
@@ -152,11 +152,11 @@ INSERT INTO PASSAGEIRO_TB VALUES (
 
 INSERT INTO PASSAGEIRO_TB VALUES (
     '99913122233',
-    'Pedro Oliveira',
+    'Pedro Pereira',
     'M',
     TO_DATE('18/08/2010', 'DD/MM/YYYY'),
     tp_endereco('Brasil', '54321098', 'MG', 'Belo Horizonte', 'Av. K, 789'),
-    tp_fones(TP_FONE('55', '31', '987654321')),
+    tp_fones(TP_FONE('55', '51', '987654321')),
     'pedro.oliveira@email.com'
 );
 
@@ -173,30 +173,30 @@ INSERT INTO PASSAGEIRO_TB VALUES (
 
 INSERT INTO PASSAGEIRO_TB VALUES (
     '55543433322',
-    'Felipe Lima',
+    'Junia Lima',
     'M',
     TO_DATE('03/12/2012', 'DD/MM/YYYY'),
     tp_endereco('Brasil', '87654321', 'RJ', 'Rio de Janeiro', 'Av. M, 456'),
     tp_fones(TP_FONE('55', '21', '999777888')),
-    'felipe.lima@email.com'
+    'junia.lima@email.com'
 );
 
 INSERT INTO PASSAGEIRO_TB VALUES (
     '66677388899',
-    'Isabela Costa',
+    'Marcio Costa',
     'F',
     TO_DATE('25/10/2011', 'DD/MM/YYYY'),
     tp_endereco('Brasil', '98765432', 'PR', 'Curitiba', 'Rua N, 321'),
     tp_fones(TP_FONE('55', '41', '999666777')),
-    'isabela.costa@email.com'
+    'marcio.costa@email.com'
 );
 
 INSERT INTO PASSAGEIRO_TB VALUES (
     '33322311144',
-    'Matheus Pereira',
+    'Juliana Pereira',
     'M',
     TO_DATE('12/03/2008', 'DD/MM/YYYY'),
     tp_endereco('Brasil', '65432109', 'RS', 'Porto Alegre', 'Av. O, 567'),
     tp_fones(TP_FONE('55', '51', '999333222')),
-    'matheus.pereira@email.com'
+    'juliana.pereira@email.com'
 );
