@@ -1,0 +1,46 @@
+-- Inserting hotel records into HOTEL table with associated accommodation references
+
+-- Insert Hotel 1 with Accommodation References
+INSERT INTO HOTEL (
+    pkid_hotel,
+    nome,
+    endereco_hotel,
+    registros
+) VALUES (
+    1,                                        -- Hotel ID
+    'Hotel A',                                -- Hotel name
+    tp_endereco('USA', '12345', 'CA', 'Los Angeles', 'Downtown'),  -- Hotel address
+    tp_nt_ref_registrada(                     -- List of accommodation references
+        tp_ref_registrada(
+            (SELECT REF(e) FROM ESTADIA e WHERE e.pk_cod_estadia = 1)  -- Reference to accommodation ID 1
+        ),
+        tp_ref_registrada(
+            (SELECT REF(e) FROM ESTADIA e WHERE e.pk_cod_estadia = 2)  -- Reference to accommodation ID 2
+        )
+    )
+);
+
+-- Insert Hotel 2 with Accommodation References
+INSERT INTO HOTEL (
+    pkid_hotel,
+    nome,
+    endereco_hotel,
+    registros
+) VALUES (
+    2,                                        -- Hotel ID
+    'Hotel B',                                -- Hotel name
+    tp_endereco('UK', '54321', 'London', 'London', 'City Center'),  -- Hotel address
+    tp_nt_ref_registrada(                     -- List of accommodation references
+        tp_ref_registrada(
+            (SELECT REF(e) FROM ESTADIA e WHERE e.pk_cod_estadia = 3)  -- Reference to accommodation ID 3
+        ),
+        tp_ref_registrada(
+            (SELECT REF(e) FROM ESTADIA e WHERE e.pk_cod_estadia = 4)  -- Reference to accommodation ID 4
+        ),
+        tp_ref_registrada(
+            (SELECT REF(e) FROM ESTADIA e WHERE e.pk_cod_estadia = 5)  -- Reference to accommodation ID 5
+        )
+    )
+);
+
+SELECT H.PKID_HOTEL,H.NOME,H.ENDERECO_HOTEL.CIDADE,DEREF(R.ESTADIAS).PK_COD_ESTADIA FROM HOTEL H, TABLE(H.REGISTROS) R;
