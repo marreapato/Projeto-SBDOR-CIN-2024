@@ -55,16 +55,17 @@ CREATE TYPE PASSAGEM_TP AS OBJECT(
     valor_passagem NUMBER(38,2),
     data_ida DATE,
     data_chegada DATE,
-    passageiro REF TP_PASSAGEIRO
+    passageiros REF TP_PASSAGEIRO
 );
 
 ----
 
-CREATE OR REPLACE TYPE tp_ref_reserva AS OBJECT(
+CREATE OR REPLACE TYPE tp_ref_compra AS OBJECT(
+data_compra DATE,
 passagem REF PASSAGEM_TP) NOT FINAL;
 /
     
-CREATE TYPE tp_nt_ref_relac AS TABLE OF tp_ref_relac;
+CREATE TYPE tp_nt_ref_reserva AS TABLE OF tp_ref_reserva;
 /
     
 
@@ -75,11 +76,12 @@ CREATE OR REPLACE TYPE VOO_TP AS OBJECT(
     destino VARCHAR2(3),      -- destino IATA 3
     hora_embarque TIMESTAMP,
     hora_desembarque TIMESTAMP,
-    compras tp_nt_ref_relac
+    reservas tp_nt_ref_reserva
 );
 
 
 ----------------
+
 CREATE TYPE ESTADIA_TP AS OBJECT(
 
  pk_cod_estadia INTEGER,
