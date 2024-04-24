@@ -77,11 +77,11 @@ CREATE OR REPLACE TYPE VOO_TP AS OBJECT(
 
 
 CREATE OR REPLACE TYPE tp_compra AS OBJECT(
+id_compra INTEGER,
 data_compra date,
 passageiros REF TP_PASSAGEIRO,
 passagem REF PASSAGEM_TP) NOT FINAL;
 /
-
 
 CREATE TYPE tp_nt_compra AS TABLE OF tp_compra
 /
