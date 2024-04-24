@@ -146,3 +146,7 @@ CREATE TYPE HOTEL_TP AS OBJECT(
     endereco_hotel tp_endereco,
     registros tp_nt_ref_registrada
 );
+
+CREATE TABLE HOTEL OF HOTEL_TP(
+    CONSTRAINT hotel_pkey PRIMARY KEY (pkid_hotel)
+)NESTED TABLE REGISTROS STORE AS LISTA_REGISTROS;
