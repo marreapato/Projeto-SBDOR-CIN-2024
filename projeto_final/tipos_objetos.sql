@@ -70,8 +70,8 @@ CREATE OR REPLACE TYPE VOO_TP AS OBJECT(
     pk_numero_voo NUMBER(38,0), -- trecho ID
     origem VARCHAR2(3),       -- origem IATA 3
     destino VARCHAR2(3),      -- destino IATA 3
-    hora_embarque DATE,
-    hora_desembarque DATE,
+    hora_embarque VARCHAR2(5),
+    hora_desembarque VARCHAR2(5),
     refere_se tp_nt_ref_relac
 );
 
