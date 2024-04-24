@@ -91,6 +91,12 @@ CREATE OR REPLACE TYPE VOO_TP AS OBJECT(
     refere_se tp_nt_ref_relac
 );
 
+CREATE TABLE VOO_TABLE OF voo_tp (
+    CONSTRAINT pkey_localizador_voo PRIMARY KEY (pk_numero_voo)
+
+) NESTED TABLE refere_se STORE AS LISTA_PASSAGENS;
+
+
 CREATE OR REPLACE TYPE tp_compra AS OBJECT(
 data_compra date,
 passageiros REF TP_PASSAGEIRO,
