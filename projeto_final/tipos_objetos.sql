@@ -84,7 +84,7 @@ passagem REF PASSAGEM_TP) NOT FINAL;
 /
 
 CREATE OR REPLACE TYPE tp_reserva AS OBJECT(
-compras REF compra_tp) NOT FINAL;
+compras REF tp_compra) NOT FINAL;
 /
 
 
