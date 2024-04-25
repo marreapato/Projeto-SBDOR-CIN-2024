@@ -69,6 +69,17 @@ INSERT INTO VOO_TABLE VALUES (
 );
 
 INSERT INTO VOO_TABLE VALUES (
+    8,
+    'FOR',
+    'REC',
+    '14:30',
+    '16:00',
+    tp_nt_ref_relac(tp_ref_relac((SELECT REF(p) FROM PASSAGEM p WHERE p.pk_localizador_passagem = 21)),
+    tp_ref_relac((SELECT REF(p) FROM PASSAGEM p WHERE p.pk_localizador_passagem = 22)),
+    tp_ref_relac((SELECT REF(p) FROM PASSAGEM p WHERE p.pk_localizador_passagem = 23)))
+);
+
+INSERT INTO VOO_TABLE VALUES (
     7,
     'RBR',
     'PVH',
