@@ -55,5 +55,5 @@ BEGIN
     COMMIT;
     
 
-    DBMS_OUTPUT.PUT_LINE('Acompanhamento Viagem updated successfully.');
+    DBMS_OUTPUT.PUT_LINE('Acompanhamento Viagem atualizado.');
 END UpdateAcompanhamentoViagem;
