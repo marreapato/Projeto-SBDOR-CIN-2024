@@ -61,12 +61,12 @@ INSERT INTO PASSAGEIRO_TB VALUES (
 
 INSERT INTO PASSAGEIRO_TB VALUES (
     '44455566677',
-    'Thiago Oliveira',
-    'M',
+    'Marcia Oliveira',
+    'F',
     TO_DATE('28/04/1985', 'DD/MM/YYYY'),
     tp_endereco('Brasil', '54321098', 'MG', 'Belo Horizonte', 'Av. G, 456'),
     tp_fones(TP_FONE('55', '31', '987654321')),
-    'thiago.oliveira@email.com'
+    'marcia.oliveira@email.com'
 );
 
 INSERT INTO PASSAGEIRO_TB VALUES (
