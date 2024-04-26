@@ -192,4 +192,37 @@ INSERT INTO COMPRA_TB VALUES (
     )
 );
 
+
+INSERT INTO COMPRA_TB VALUES (
+    tp_compra(
+        21,
+        TO_DATE('23/02/2024', 'DD/MM/YYYY'), -- data_compra
+        (SELECT REF(p) FROM PASSAGEIRO_TB p WHERE p.PK_CPF = '33322311144'), -- passageiros REF
+        (SELECT REF(pt) FROM PASSAGEM pt WHERE pt.pk_localizador_passagem = 21) -- passagem REF
+    )
+);
+
+
+
+INSERT INTO COMPRA_TB VALUES (
+    tp_compra(
+        22,
+        TO_DATE('23/02/2024', 'DD/MM/YYYY'), -- data_compra
+        (SELECT REF(p) FROM PASSAGEIRO_TB p WHERE p.PK_CPF = '33322211144'), -- passageiros REF
+        (SELECT REF(pt) FROM PASSAGEM pt WHERE pt.pk_localizador_passagem = 22) -- passagem REF
+    )
+);
+
+
+
+INSERT INTO COMPRA_TB VALUES (
+    tp_compra(
+        23,
+        TO_DATE('23/02/2024', 'DD/MM/YYYY'), -- data_compra
+        (SELECT REF(p) FROM PASSAGEIRO_TB p WHERE p.PK_CPF = '22233344455'), -- passageiros REF
+        (SELECT REF(pt) FROM PASSAGEM pt WHERE pt.pk_localizador_passagem = 23) -- passagem REF
+    )
+);
+
+
 SELECT C.DATA_COMPRA, DEREF(C.PASSAGEIROS).NOME,DEREF(C.PASSAGEIROS).PK_CPF FROM COMPRA_TB C;
