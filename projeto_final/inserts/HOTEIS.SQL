@@ -7,11 +7,11 @@ INSERT INTO HOTEL(
     1,                                 -- pkid_hotel
     'Hotel ABC',                       -- nome
     tp_endereco(                       -- endereco_hotel
-        'Brazil',                      -- pais
+        'Brasil',                      -- pais
         '12345-678',                   -- cep
         'SP',                          -- estado
         'Sao Paulo',                   -- cidade
-        'Apt 123'                      -- complemento
+        'Rua Marechal 3'                      -- complemento
     ),
     tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 1)))             -- registros (empty collection)
 );
