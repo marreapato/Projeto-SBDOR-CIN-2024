@@ -24,7 +24,7 @@ INSERT INTO HOTEL(
     registros
 ) VALUES (
     2,                                 -- pkid_hotel
-    'Copacabana Palace',                       -- nome
+    'Praia Hotel',                       -- nome
     tp_endereco(                       -- endereco_hotel
         'Brasil',                      -- pais
         '12345-678',                   -- cep
