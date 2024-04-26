@@ -26,7 +26,7 @@ INSERT INTO ESTADIA VALUES (
 
 INSERT INTO ESTADIA VALUES (
     ESTADIA_TP(
-        3, -- pk_cod_estadia
+        4, -- pk_cod_estadia
         2990.00, -- valor_estadia
          TO_DATE('25/09/2024', 'DD/MM/YYYY'),
     		TO_DATE('30/09/2024', 'DD/MM/YYYY'),
@@ -37,7 +37,7 @@ INSERT INTO ESTADIA VALUES (
 
 INSERT INTO ESTADIA VALUES (
     ESTADIA_TP(
-        4, -- pk_cod_estadia
+        3, -- pk_cod_estadia
         2990.00, -- valor_estadia
          TO_DATE('25/09/2024', 'DD/MM/YYYY'),
     		TO_DATE('30/09/2024', 'DD/MM/YYYY'),
