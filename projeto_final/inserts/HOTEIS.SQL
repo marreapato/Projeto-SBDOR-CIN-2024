@@ -32,7 +32,7 @@ INSERT INTO HOTEL(
         'Rio de Janeiro',                   -- cidade
         'Rua Marechal 1'                      -- complemento
     ),
-    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 1)))             -- registros (empty collection)
+    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 2)))             -- registros (empty collection)
 );
 
 SELECT H.PKID_HOTEL, H.ENDERECO_HOTEL.CIDADE, DEREF(R.ESTADIAS).VALOR_ESTADIA, DEREF(DEREF(RES.COMPRAS).PASSAGEIROS).NOME FROM HOTEL H,
