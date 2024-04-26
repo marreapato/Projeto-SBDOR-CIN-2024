@@ -168,7 +168,7 @@ INSERT INTO COMPRA_TB VALUES (
 INSERT INTO COMPRA_TB VALUES (
     tp_compra(
         18,
-        TO_DATE('20/01/2024', 'DD/MM/YYYY'), -- data_compra -- data_compra
+        TO_DATE('20/01/2024', 'DD/MM/YYYY'), -- data_compra
         (SELECT REF(p) FROM PASSAGEIRO_TB p WHERE p.PK_CPF = '55543433322'), -- passageiros REF
         (SELECT REF(pt) FROM PASSAGEM pt WHERE pt.pk_localizador_passagem = 18) -- passagem REF
     )
