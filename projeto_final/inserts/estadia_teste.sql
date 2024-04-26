@@ -38,7 +38,7 @@ INSERT INTO ESTADIA VALUES (
 INSERT INTO ESTADIA VALUES (
     ESTADIA_TP(
         3, -- pk_cod_estadia
-        2990.00, -- valor_estadia
+        2929.30, -- valor_estadia
          TO_DATE('22/11/2024', 'DD/MM/YYYY'),
     		TO_DATE('30/11/2024', 'DD/MM/YYYY'),
         TP_NT_RESERVA(TP_RESERVA((SELECT REF(pt) FROM compra_tb pt WHERE pt.id_compra = 7)),
