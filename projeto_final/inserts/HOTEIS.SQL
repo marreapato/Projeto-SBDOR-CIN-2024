@@ -5,7 +5,7 @@ INSERT INTO HOTEL(
     registros
 ) VALUES (
     1,                                 -- pkid_hotel
-    'Hotel ABC',                       -- nome
+    'Hotel Fortaleza',                       -- nome
     tp_endereco(                       -- endereco_hotel
         'Brasil',                      -- pais
         '12345-678',                   -- cep
