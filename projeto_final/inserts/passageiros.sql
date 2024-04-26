@@ -70,7 +70,8 @@ INSERT INTO PASSAGEIRO_TB VALUES (
     'F',
     TO_DATE('28/04/1985', 'DD/MM/YYYY'),
     tp_endereco('Brasil', '54321098', 'MG', 'Belo Horizonte', 'Av. G, 456'),
-    tp_fones(TP_FONE('55', '31', '987654321')),
+    tp_fones(TP_FONE('55', '31', '987654321'),
+    TP_FONE('55', '31', '982654321')),
     'marcia.oliveira@email.com'
 );
 
@@ -80,7 +81,9 @@ INSERT INTO PASSAGEIRO_TB VALUES (
     'F',
     TO_DATE('05/11/1993', 'DD/MM/YYYY'),
     tp_endereco('Brasil', '12345678', 'SP', 'São Paulo', 'Rua H, 321'),
-    tp_fones(TP_FONE('55', '11', '999333222')),
+    tp_fones(TP_FONE('55', '11', '999333222'),
+    TP_FONE('55', '11', '999333322'),
+    TP_FONE('55', '11', '999313222')),
     'camila.lima@email.com'
 );
 
