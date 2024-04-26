@@ -42,7 +42,7 @@ INSERT INTO HOTEL(
     endereco_hotel,
     registros
 ) VALUES (
-    2,                                 -- pkid_hotel
+    3,                                 -- pkid_hotel
     'Hotel Guarulhos',                       -- nome
     tp_endereco(                       -- endereco_hotel
         'Brasil',                      -- pais
@@ -51,7 +51,7 @@ INSERT INTO HOTEL(
         'Guarulhos',                   -- cidade
         'Rua Dom Pedro'                      -- complemento
     ),
-    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 2)))             -- registros (empty collection)
+    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 3)))             -- registros (empty collection)
 );
 
 SELECT H.PKID_HOTEL, H.ENDERECO_HOTEL.CIDADE, DEREF(R.ESTADIAS).VALOR_ESTADIA, DEREF(DEREF(RES.COMPRAS).PASSAGEIROS).NOME FROM HOTEL H,
