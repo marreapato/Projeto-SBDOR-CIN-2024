@@ -1,6 +1,4 @@
--- Inserting purchase data into COMPRA_TB
 
--- Inserting a purchase record for a passenger and ticket combination
 INSERT INTO COMPRA_TB VALUES (
     tp_compra(
         1,
@@ -10,7 +8,7 @@ INSERT INTO COMPRA_TB VALUES (
     )
 );
 
--- Inserting another purchase record for a different passenger and ticket
+
 INSERT INTO COMPRA_TB VALUES (
     tp_compra(
         2,
@@ -20,7 +18,6 @@ INSERT INTO COMPRA_TB VALUES (
     )
 );
 
--- Inserting another purchase record for a different passenger and ticket
 INSERT INTO COMPRA_TB VALUES (
     tp_compra(
         3,
