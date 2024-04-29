@@ -80,7 +80,7 @@ CREATE OR REPLACE TYPE VOO_TP AS OBJECT(
 CREATE OR REPLACE TYPE tp_compra AS OBJECT(
 id_compra INTEGER,
 data_compra date,
-passagem REF PASSAGEM_TP) NOT FINAL;
+passagem tp_nt_ref_relac) NOT FINAL;
 /
 
 CREATE OR REPLACE TYPE tp_reserva AS OBJECT(
