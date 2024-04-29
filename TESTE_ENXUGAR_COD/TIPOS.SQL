@@ -48,11 +48,6 @@ CREATE TYPE MENOR_IDADE_TP UNDER TP_PASSAGEIRO(
     acompanhamento_especial varchar2(3)  
 );
 
-CREATE OR REPLACE TYPE tp_ref_compra_passageiro AS OBJECT(
-DATA_COMPRA DATE,
-PASSAGEIROS REF TP_PASSAGEIRO) NOT FINAL;
-/
-
 
 --DROP TYPE PASSAGEM_TP;
 CREATE TYPE PASSAGEM_TP AS OBJECT(    
@@ -60,7 +55,7 @@ CREATE TYPE PASSAGEM_TP AS OBJECT(
     valor_passagem NUMBER(38,2),
     data_ida DATE,
     data_chegada DATE,
-    COMPRAS tp_ref_compra_passageiro
+    passageiro ref tp_passageiro
 );
 
 
@@ -81,6 +76,22 @@ CREATE OR REPLACE TYPE VOO_TP AS OBJECT(
     refere_se tp_nt_ref_relac
 );
 
+
+CREATE OR REPLACE TYPE tp_compra AS OBJECT(
+id_compra INTEGER,
+data_compra date,
+passagem REF PASSAGEM_TP) NOT FINAL;
+/
+
+CREATE OR REPLACE TYPE tp_reserva AS OBJECT(
+compras REF tp_compra) NOT FINAL;
+/
+
+
+CREATE TYPE tp_nt_reserva AS TABLE OF tp_reserva;
+/
+
+
 ----------------
 CREATE TYPE ESTADIA_TP AS OBJECT(
 
@@ -88,7 +99,7 @@ CREATE TYPE ESTADIA_TP AS OBJECT(
  valor_estadia NUMBER(38,2),
  data_check_in DATE,
  data_check_out DATE,
- reservas tp_nt_ref_relac
+ reservas tp_nt_reserva
  
 );
 
