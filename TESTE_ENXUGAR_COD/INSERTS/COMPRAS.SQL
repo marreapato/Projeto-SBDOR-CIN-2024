@@ -69,7 +69,7 @@ INSERT INTO COMPRA_TB VALUES (
         7,
         TO_DATE('01/01/2024', 'DD/MM/YYYY'), 
         TP_NT_REF_RELAC(
-    TP_REF_RELAC(((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 18))))- PASSAGEM_TB REF
+    TP_REF_RELAC(((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 18))))
     )
 );
 
