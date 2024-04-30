@@ -5,13 +5,13 @@ INSERT INTO HOTEL(
     registros
 ) VALUES (
     1,                                 -- pkid_hotel
-    'Hotel Fortaleza',                       -- nome
+    'Hotel Copacabana',                       -- nome
     tp_endereco(                       -- endereco_hotel
         'Brasil',                      -- pais
         '12345-678',                   -- cep
-        'CE',                          -- estado
-        'Fortaleza',                   -- cidade
-        'Rua Marechal 3'                      -- complemento
+        'RJ',                          -- estado
+        'Rio de Janeiro',                   -- cidade
+        'Rua Machado de Assis'                      -- complemento
     ),
     tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 1)))             -- registros (empty collection)
 );
@@ -24,16 +24,15 @@ INSERT INTO HOTEL(
     registros
 ) VALUES (
     2,                                 -- pkid_hotel
-    'Praia Hotel',                       -- nome
+    'Hotel BH',                       -- nome
     tp_endereco(                       -- endereco_hotel
         'Brasil',                      -- pais
         '12345-678',                   -- cep
-        'RJ',                          -- estado
-        'Rio de Janeiro',                   -- cidade
+        'MG',                          -- estado
+        'Belo Horizonte',                   -- cidade
         'Rua Marechal 1'                      -- complemento
     ),
-    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 2)),
-tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 4)))             -- registros (empty collection)
+    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 2)))             -- registros (empty collection)
 );
 
 
@@ -62,13 +61,13 @@ INSERT INTO HOTEL(
     registros
 ) VALUES (
     4,                                 -- pkid_hotel
-    'Hotel Palace',                       -- nome
+    'Hotel Praia',                       -- nome
     tp_endereco(                       -- endereco_hotel
         'Brasil',                      -- pais
         '12345-678',                   -- cep
-        'PR',                          -- estado
-        'Curitiba',                   -- cidade
-        'Rua Maringa'                      -- complemento
+        'PE',                          -- estado
+        'Recife',                   -- cidade
+        'Rua Lampiao'                      -- complemento
     ),
     tp_nt_ref_registrada()             -- registros (empty collection)
 );
