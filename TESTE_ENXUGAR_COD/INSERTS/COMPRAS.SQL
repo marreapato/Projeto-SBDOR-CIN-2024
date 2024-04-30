@@ -7,10 +7,7 @@ INSERT INTO COMPRA_TB VALUES (
     TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 2)),
     TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 3)),
     TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 4)),
-    TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 5)),
-    TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 21)),
-    TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 22)),
-    TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 23))
+    TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 5))
     
     ) -- PASSAGEM_TB REF
     )
@@ -106,5 +103,17 @@ INSERT INTO COMPRA_TB VALUES (
 );
 
 
+INSERT INTO COMPRA_TB VALUES (
+    tp_compra(
+        11,
+        TO_DATE('15/02/2024', 'DD/MM/YYYY'), -- data_compra
+        TP_NT_REF_RELAC(
+    TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 21)),
+    TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 22)),
+    TP_REF_RELAC((SELECT REF(pt) FROM PASSAGEM_TB pt WHERE pt.pk_localizador_passagem = 23))
+    
+    ) -- PASSAGEM_TB REF
+    )
+);
 
 SELECT * FROM COMPRA_TB C;
