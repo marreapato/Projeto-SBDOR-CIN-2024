@@ -83,14 +83,6 @@ data_compra date,
 passagem tp_nt_ref_relac) NOT FINAL;
 /
 
-CREATE OR REPLACE TYPE tp_reserva AS OBJECT(
-compras REF tp_compra) NOT FINAL;
-/
-
-
-CREATE TYPE tp_nt_reserva AS TABLE OF tp_reserva;
-/
-
 
 ----------------
 CREATE TYPE ESTADIA_TP AS OBJECT(
@@ -99,7 +91,7 @@ CREATE TYPE ESTADIA_TP AS OBJECT(
  valor_estadia NUMBER(38,2),
  data_check_in DATE,
  data_check_out DATE,
- reservas tp_nt_reserva
+ reservas tp_compra
  
 );
 
