@@ -91,7 +91,7 @@ CREATE TYPE ESTADIA_TP AS OBJECT(
  valor_estadia NUMBER(38,2),
  data_check_in DATE,
  data_check_out DATE,
- reservas tp_compra
+ reservas REF tp_compra
  
 );
 
