@@ -8,8 +8,8 @@ INSERT INTO VOO_TABLE VALUES (
     '02:25',
     tp_nt_ref_relac(tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 1)),
     tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 2)),
-    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 6)),
-    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 5)),
+    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 14)),
+    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 13)),
     tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 18))) -- Nested table containing reference to PASSAGEM_TP
 );
 
@@ -31,10 +31,10 @@ INSERT INTO VOO_TABLE VALUES (
     'REC',
     '17:30',
     '19:00',
-    tp_nt_ref_relac(tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 14)),
+    tp_nt_ref_relac(tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 6)),
     tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 4)),
     tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 12)),
-    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 13)))
+    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 5)))
 );
 
 INSERT INTO VOO_TABLE VALUES (
