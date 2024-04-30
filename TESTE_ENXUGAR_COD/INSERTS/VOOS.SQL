@@ -34,7 +34,8 @@ INSERT INTO VOO_TABLE VALUES (
     tp_nt_ref_relac(tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 6)),
     tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 4)),
     tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 12)),
-    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 5)))
+    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 5)),
+    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 16)))
 );
 
 INSERT INTO VOO_TABLE VALUES (
@@ -64,7 +65,6 @@ INSERT INTO VOO_TABLE VALUES (
     '09:00',
     tp_nt_ref_relac(tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 10)),
     tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 15)),
-    tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 16)),
     tp_ref_relac((SELECT REF(p) FROM PASSAGEM_TB p WHERE p.pk_localizador_passagem = 20)))
 );
 
