@@ -69,10 +69,11 @@ INSERT INTO HOTEL(
         'Recife',                   -- cidade
         'Rua Lampiao'                      -- complemento
     ),
-    tp_nt_ref_registrada()             -- registros (empty collection)
+    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 4)))             -- registros (empty collection)
 );
-
 
 
 SELECT H.PKID_HOTEL, H.ENDERECO_HOTEL.CIDADE, DEREF(PG.PASSAGEM).PK_LOCALIZADOR_PASSAGEM FROM HOTEL H,
     TABLE(H.REGISTROS) R, TABLE(DEREF((DEREF(R.ESTADIAS).RESERVAS)).PASSAGENS_COMPRADAS) PG;
+    
+COMMIT;
