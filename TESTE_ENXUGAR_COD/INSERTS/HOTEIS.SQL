@@ -13,7 +13,7 @@ INSERT INTO HOTEL(
         'Rio de Janeiro',                   -- cidade
         'Rua Machado de Assis'                      -- complemento
     ),
-    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 1)))             -- registros (empty collection)
+    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 1)))             -- registros
 );
 
 
@@ -32,7 +32,7 @@ INSERT INTO HOTEL(
         'Belo Horizonte',                   -- cidade
         'Rua Marechal 1'                      -- complemento
     ),
-    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 2)))             -- registros (empty collection)
+    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 2)))             -- registros
 );
 
 
@@ -51,7 +51,7 @@ INSERT INTO HOTEL(
         'Guarulhos',                   -- cidade
         'Rua Dom Pedro'                      -- complemento
     ),
-    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 3)))             -- registros (empty collection)
+    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 3)))             -- registros
 );
 
 INSERT INTO HOTEL(
@@ -69,7 +69,7 @@ INSERT INTO HOTEL(
         'Recife',                   -- cidade
         'Rua Lampiao'                      -- complemento
     ),
-    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 4)))             -- registros (empty collection)
+    tp_nt_ref_registrada(tp_ref_registrada((SELECT REF(pt) FROM estadia pt WHERE pt.pk_cod_estadia = 4)))             -- registros
 );
 
 
